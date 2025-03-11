@@ -9,3 +9,15 @@ Array.prototype.mymap=function (callbfunc) {
 
     return arr;
 }
+
+//Filter Polyfill
+Array.prototype.myfilter=function (callbfunc) {
+    let arr=[];
+    for(let i=0;i<this.length;i++){
+        if(callbfunc(this[i],i,this)){
+            arr.push(this[i]);
+        }
+    }
+    return arr;
+}
+
