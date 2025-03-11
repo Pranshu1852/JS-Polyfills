@@ -102,3 +102,27 @@ Array.prototype.myfind=function (val){
 
     return -1;
 }
+
+//Findind Polyfill
+Array.prototype.myfindind=function (val){
+    let start=0;
+    let end=this.length-1;
+
+    while(start<=end){
+        let mid=(start+end)/2;
+        mid=Math.floor(mid);
+        console.log(mid)
+
+        if(this[mid]==val){
+            return mid;
+        }
+        else if(this[mid]<val){
+            start=mid+1;
+        }
+        else{
+            end=mid-1;
+        }
+    }
+
+    return -1;
+}
