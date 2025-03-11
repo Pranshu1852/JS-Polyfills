@@ -21,3 +21,12 @@ Array.prototype.myfilter=function (callbfunc) {
     return arr;
 }
 
+//Reduce Polyfill
+Array.prototype.myreduce=function (callbfunc,initvalue=0){
+    let accumulator=initvalue;
+
+    for(let i=0;i<this.length;i++){
+        accumulator=callbfunc(accumulator,this[i]);
+    }
+    return accumulator;
+}
