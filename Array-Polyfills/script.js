@@ -48,3 +48,15 @@ Array.prototype.myjoin=function (separater=","){
     }
     return result;
 }
+
+//Pop Pollyfill
+Array.prototype.mypop=function (){
+    if(this.length>0){
+        let lastele=this[this.length-1];
+        this.length-=1;
+        return lastele;
+    }
+    else{
+        console.log("Array doesn't have any elements.")
+    }
+}
