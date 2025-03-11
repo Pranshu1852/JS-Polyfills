@@ -39,3 +39,12 @@ Array.prototype.myslice=function (start,end){
     }
     return arr;
 }
+
+//Join Pollyfill
+Array.prototype.myjoin=function (separater=","){
+    let result="";
+    for(let i=0;i<this.length;i++){
+        i===this.length-1 ? result+=this[i] : result+=this[i]+separater;
+    }
+    return result;
+}
