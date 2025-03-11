@@ -60,3 +60,21 @@ Array.prototype.mypop=function (){
         console.log("Array doesn't have any elements.")
     }
 }
+
+//Shift Polyfill
+Array.prototype.myshift=function (){
+    if(this.length>0){
+        let firstele=this[0];
+        
+        for(let i=0;i<this.length-1;i++){
+            this[i]=this[i+1];
+        }
+
+        this.length-=1;
+
+        return firstele;
+    }
+    else{
+        console.log("Array doesn't have any elements.")
+    }
+}
