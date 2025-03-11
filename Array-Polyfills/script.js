@@ -78,3 +78,27 @@ Array.prototype.myshift=function (){
         console.log("Array doesn't have any elements.")
     }
 }
+
+//Find Polyfill
+Array.prototype.myfind=function (val){
+    let start=0;
+    let end=this.length-1;
+
+    while(start<=end){
+        let mid=(start+end)/2;
+        mid=Math.floor(mid);
+        console.log(mid)
+
+        if(this[mid]==val){
+            return this[mid];
+        }
+        else if(this[mid]<val){
+            start=mid+1;
+        }
+        else{
+            end=mid-1;
+        }
+    }
+
+    return -1;
+}
