@@ -30,3 +30,12 @@ Array.prototype.myreduce=function (callbfunc,initvalue=0){
     }
     return accumulator;
 }
+
+//Slice Polyfill
+Array.prototype.myslice=function (start,end){
+    let arr=[];
+    for(let i=start;i<end;i++){
+        arr.push(this[i]);
+    }
+    return arr;
+}
