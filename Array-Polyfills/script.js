@@ -136,3 +136,13 @@ Array.prototype.myevery=function (callback){
     
     return true;
 }
+
+Array.prototype.myshift=function (){
+    let result=[];
+
+    for(let i=1;i<this.length;i++){
+        result.push(this[i]);
+    }
+
+    return result;
+}
