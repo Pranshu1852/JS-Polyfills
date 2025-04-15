@@ -126,3 +126,13 @@ Array.prototype.myfindind=function (val){
 
     return -1;
 }
+
+Array.prototype.myevery=function (callback){
+    for(let i=0;i<this.length;i++){
+        if(this.hasOwnProperty(i)&&!callback.call(this,this[i],i,this)){
+            return false;
+        }
+    }
+    
+    return true;
+}
