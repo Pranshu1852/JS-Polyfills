@@ -146,3 +146,7 @@ Array.prototype.myshift=function (){
 
     return result;
 }
+
+Array.prototype.myvalueOf=function (){
+    return this;
+}
