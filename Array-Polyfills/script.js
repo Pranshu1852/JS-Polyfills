@@ -156,3 +156,13 @@ Array.prototype.forEach=function(cb){
         cb.call(this[i],i,this);
     }
 }
+
+Array.prototype.indexOf=function(target,startInd=0){
+    for(let i=startInd;i<this.length;i++){
+        if(this[i]===target){
+            return i;
+        }
+    }
+
+    return -1;
+}
