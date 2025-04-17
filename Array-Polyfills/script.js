@@ -150,3 +150,9 @@ Array.prototype.myshift=function (){
 Array.prototype.myvalueOf=function (){
     return this;
 }
+
+Array.prototype.forEach=function(cb){
+    for(let i=0;i<this.length;i++){
+        cb.call(this[i],i,this);
+    }
+}
