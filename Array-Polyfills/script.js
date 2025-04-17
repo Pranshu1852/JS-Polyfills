@@ -166,3 +166,13 @@ Array.prototype.indexOf=function(target,startInd=0){
 
     return -1;
 }
+
+Array.prototype.lastIndexOf=function(target,startInd=this.length-1){
+    for(let i=startInd;i>=0;i--){
+        if(this[i]===target){
+            return i;
+        }
+    }
+
+    return -1;
+}
